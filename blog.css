@@ -1,0 +1,325 @@
+/* fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Poppins&display=swap');
+
+/* global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #273c75;
+    --secondary-bg-color:#182C61;
+    --alter-color: #f9ca24;
+    --btn-color: #F79F1F;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #D3D3D3 ;
+}
+
+.aligning-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+
+/* utility classes*/
+
+:is(.header-title, .header-details) {          /* common style for header area title and details*/ 
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.alter-color{                  /* for altering colors of a span*/
+    color:var(--alter-color) ;
+}
+
+.make-flexible {       
+   display: flex;
+   justify-content: center;
+}
+
+.fa-solid{
+    color: rgba(128, 128, 128, 0.964);
+}
+
+.icon-1{
+    margin-left: 0.3em;
+}
+
+.icon-2{
+    margin-left: 1.4em;
+}
+
+.info-item{
+    margin-left: 5em;
+    cursor: pointer;
+}
+/* landing page styling */
+
+.header-container{          /* flex the items & center the content on the website with additional styling  */
+    background-color: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+    /* max-width: 65%; */
+    margin: 2em auto 0;
+    border-radius: 10px;
+    padding-top: 2em;
+}
+
+.header-info{               /* half-width-ing the left part of the landing area and spacing out the two elements from the sides*/
+    width: 50%;
+    margin-inline: 2em;
+}
+
+.header-title{              /* additional styling to the header title */
+    font-size: 3rem;
+    line-height: 1.2em;
+    margin-bottom: 0.3em;
+}
+
+.btn{               /* styling the button*/
+    margin-block: 2em;
+    padding: 1.2em;
+    border-radius: 5px;
+    background-color: var(--btn-color);
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+}
+
+/* side-nav area styling */
+
+.nav-container{             /* styles for navbar container */
+    background-color: var(--primary-bg-color);
+    margin-top: 4em;
+    padding: 0.7em 1em;
+    width: 12%;
+    text-align: center;
+    border-radius: 10px;
+    height: 12em;
+}
+
+.nav-container li a{           /* customizing anchor tag styling*/
+    font-family: 'Joan', serif;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-item{                     /* styling individual li items inside the side-navbar */
+    background-color: #FFFFFF;
+    margin-block: 1em;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+li:target{                      /* integrating the navbar styling of showing current page visited by changing background color*/
+    background-color: var(--btn-color);
+}
+
+/* grid layout blog area styling */
+
+.blogs{                     /* implementing grid for displaying the blogs*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    margin: 4em 2em 4.1em 2em;
+}
+
+.blog{      /* class for individual blog and using flex for aligning the blog-info */
+    border: 1px solid rgba(0, 0, 0, 0.259); 
+    border-radius: 11px;
+    width: 99.5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+.blog-info{
+    margin-left: 1.3em;
+}
+
+.headline{
+    font-size: 0.8rem;
+    margin-block: 1em;
+    cursor: pointer;
+}
+
+.transfer-style{
+    border: 1px solid black;
+    font-size: 0.8rem;
+    margin-top: 1em;
+    padding: 0.2em;
+    border-radius: 5px;
+    width: 20%;
+}
+
+
+/* footer area styling */
+
+.footer-style {        /* give a background color */    
+    margin-top: 3em;
+    text-align: center;
+    background-color: var(--secondary-bg-color);
+    padding: 7em 4em 3em;
+    font-family: 'Joan', serif;
+    color: #FFFFFF;
+}
+
+.footer-title{      /* setup title for footer*/
+    font-size: 1.2rem;
+    margin-top: -3em;
+}
+
+hr{
+    margin-top: 4em;
+    border: 1px solid #ffffff36;
+}
+
+.li-formatting{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.icons{
+    margin-top: 2em;
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 4em;
+}
+
+.fa-brands{
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+/* media quaries for different devices */
+
+/* media quary for mobiles */
+@media only screen and (max-width: 688px) {
+
+    .header-container{
+        flex-direction: column;
+        margin-inline: 0;
+        padding-inline: 2em;
+    }
+
+    .header-info{
+        margin-inline: 0;
+        width: 90%;
+    }
+
+    .header-title{
+        font-size:1.9rem;
+    }
+
+    :is(.header-title, .header-details){
+        margin-bottom: 1em;
+    }
+
+    .make-flexible{
+        flex-direction: column;
+    }
+
+    .nav-container{
+        width: 100%;
+        background-color: #D3D3D3;
+    }
+
+    .nav-item{
+        background-color: #D3D3D3;
+        border: 1px solid rgba(0, 0, 0, 0.34);
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0;
+    }
+
+    .li-formatting{
+        flex-direction: column;
+    }
+
+    .info-item{
+        margin: 1em 0 0;
+        cursor: pointer;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        margin-right: 2em;
+    }
+
+}
+
+@media only screen and (min-width:689px) and (max-width:1200px) {
+
+    .nav-container{
+        width: 93%;
+        background-color: #D3D3D3;
+        margin-top: 1em;
+        height: 7em;
+    }
+    .nav-container ul{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2.5em;
+    }   
+
+    .nav-item{
+        background-color: #D3D3D3;
+        border: 1px solid black;
+        padding-inline: 2em;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .make-flexible{
+        flex-direction: column;
+    }
+
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0;
+    }
+
+    :is(.alter-position-1,.alter-position-2,.alter-position-3,.alter-position-4,.alter-position-5,.alter-position-6) {
+        position: relative;
+    }
+
+    .alter-position-1{
+        left: 3em;
+    }
+
+    .alter-position-2{
+        left: 4em;
+    }
+
+    .alter-position-3{
+        left: 5em;
+    }
+
+    .alter-position-4{
+        left: 6em;
+    }
+
+    :is(.alter-position-5,.alter-position-6) {
+        top: 5em;
+        right: 21em;
+    }
+
+    .icons{
+        margin-top: 3em;
+    }
+}
